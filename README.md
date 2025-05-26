@@ -41,6 +41,17 @@ Detected objects:
  - book: 0.35
 
 
+## 📸 Output Examples
+
+Here are a few sample outputs from the trained YOLO-style model using `demo.py`:
+
+![image](https://github.com/user-attachments/assets/be299d0f-ba56-4ce0-b37f-eddd238a8e96)
+![image](https://github.com/user-attachments/assets/310b2040-8cb6-4719-96ae-6ef95fe4c86a)
+
+
+
+
+
 Install dependencies with:
 
 ```bash
