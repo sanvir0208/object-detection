@@ -1,13 +1,16 @@
 # Experience Report
 
-## 1. Goal
-The chief aim was to create an object detection model from scratch in a YOLO-like fashion without using any pretrained weights. That is to say, it was really meant to understand and implement core concepts of object detection on images, such as bounding box regression, objectness prediction, and multi-class classification. 
+## 1. Objective
+The primary goal was to create an object detection model inspired by YOLO, starting from scratch and without relying on any pretrained weights. The aim was to dive deep into the essential concepts of object detection, including bounding box regression, objectness prediction, and multi-class classification in images.
 
-## 2. Description
-The object detection architecture consisted of a lightweight CNN backbone for feature extraction; it treated the image as a grid of 7x7 cells, predicting bounding boxes and class probabilities for each cell, just like in YOLO. The Pascal VOC dataset with 20 object classes was utilized for training. A custom loss function, covering losses for localization, confidence, and classification, was used for finding the optimum during training. 
+## 2. Approach
+This model employs a lightweight convolutional neural network as its backbone to pull features from images. It segments the image into a 7x7 grid, predicting bounding boxes and class probabilities for each cell, much like YOLO does. We utilized the Pascal VOC dataset, which includes 20 different object classes, and crafted a custom loss function that merges localization, confidence, and classification losses to enhance training.
 
 ## 3. Training
-Training ran for 90 epochs, with an 8-batch size optionally using Adam with cosine annealing steps to reduce the learning rate. Training and validation were split to assess performance. The best weight of the model was saved for the lowest validation loss so it would not overfit and generalize.
+Training spanned 90 epochs with a batch size of 8, using the Adam optimizer alongside a cosine annealing learning rate schedule. The dataset was divided into training and validation sets to keep an eye on performance. We saved the best model weights based on the lowest validation loss to avoid overfitting and to promote better generalization.
 
-## 4. Conclusion
-Testing images showed the model to have reasonable detection accuracy; it detected objects like person, dog, and indoor plants. This project allowed for hands-on experience with designing custom detection heads, encoding ground truth labels for object detection, and applying non-max suppression to refine results.
+## 4. Outcome
+The model we trained showed decent detection accuracy on test images, successfully recognizing objects like people, dogs, and indoor plants. This project offered hands-on experience in designing custom detection heads, encoding ground truth labels for object detection, and applying non-max suppression to refine results. It also deepened our understanding of the training dynamics involved in object detection tasks.
+
+## 5. Trained Model Weights
+The final trained model weights are stored in the file `weights/yolo_best.pth`. These weights encapsulate the learned parameters after 90 epochs of training and can be loaded to make predictions on new images without needing to retrain. The saved weights ensure reproducibility and can be directly used for deployment or further fine-tuning.
