@@ -133,7 +133,7 @@ class VOCDataset(torch.utils.data.Dataset):
         label = encode_label(target)
         return img, label
 
-def train(epochs=20, batch_size=8, lr=1e-3):
+def train(epochs=90, batch_size=8, lr=1e-3):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print("Using device:", device)
 
