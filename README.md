@@ -23,8 +23,6 @@ The model was trained on Pascal VOC classes:
 - Optimized bounding box coordinates and class probabilities  
 - Implemented in PyTorch  
 
-## Usage
-
 ### Requirements
 
 - Python 3.x  
