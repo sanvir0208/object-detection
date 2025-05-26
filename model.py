@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 from torchvision.models import mobilenet_v2
-
 class YOLOModel(nn.Module):
     def __init__(self, num_classes=20, grid_size=7):
         super(YOLOModel, self).__init__()
