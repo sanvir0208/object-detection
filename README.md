@@ -41,7 +41,7 @@ Detected objects:
  - book: 0.35
 
 
-## 📸 Output Examples
+##  Output Examples
 
 Here are a few sample outputs from the trained YOLO-style model using `demo.py`:
 
